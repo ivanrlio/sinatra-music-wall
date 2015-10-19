@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row">
+    
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div id="left-col-divider"></div><!--trying to add column dividers -->
+    </div>
+    <div class="col-sm-4">
+      <% @songs.each do |song| %>
+        <div class = "song">
+          <h3><%= song.title %><br><small id= "artist"><%= song.artist %></small></h3>
+          <p>
+            <small id="song_link"><a href="<%= song.url %>">Listen</a></small>
+          </p>
+          <br>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-sm-4">
+      <div id="right-col-divider"></div> <!--trying to add column dividers -->
+    </div>
+  </div>
+
+
+
+

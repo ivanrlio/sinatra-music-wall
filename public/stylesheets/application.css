@@ -1,0 +1,32 @@
+body {
+  text-align: center;
+  font-family: Verdana;
+}
+
+.page_navbar {
+  color: #fff;
+  font-size: 60px;
+  padding-bottom: 20px;
+}
+
+small#artist {
+  font-size: 13px;
+  font-style: italic;
+}
+
+small#song_link {
+  font-size: 11px;
+}
+
+div#right-col-divider {
+  padding-left: 15px; 
+  border-left: 1px solid #ccc;
+  
+}
+
+div#left-col-divider {
+  padding-right: 15px; 
+  border-right: 1px solid #ccc;
+  
+}
+

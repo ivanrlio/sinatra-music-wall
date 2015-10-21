@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="col-sm-5">
+    <h1>Added songs</h1><br>
+    <% current_user.songs.each do |song| %>
+      <div class="song">
+        <h3><%= song.title %><br><small id="artist"><%= song.artist %></small></h3>
+      </div>
+      <hr/>
+    <% end %>
+  </div>
+  <div class="col-sm-2"></div>
+  <div class="col-sm-5">
+    <h1>Upvoted songs</h1><br>
+    <% Upvote.where(users_id: current_user.id).each do |upvote| %>
+    <% upvoted_song = Song.find(upvote[:songs_id]) %>
+      <div class="song">
+        <h3><%= upvoted_song.title %><br><small id="artist"><%= upvoted_song.artist %></small></h3>
+      </div>
+      <hr/>
+    <% end %>  
+  </div>
+
+</div>

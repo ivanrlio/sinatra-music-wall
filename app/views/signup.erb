@@ -1,0 +1,80 @@
+<div class="container">
+  <div class="row">
+    <% if @error_messages %>
+      <ul class="errors">
+        <% @error_messages.each do |message| %>
+          <li><h2 class="error_style"><%= message %></h2></li>
+        <% end %>
+      </ul>
+    <% end %>
+    <form action="/signup" method="POST"/>
+      <div class="col-sm-4">
+        <fieldset>
+          <div>
+            <legend class="clearer">Personal Information</legend>
+              <div class="form-group">
+                <label for="first_name" >First Name</label>
+                <input type="text" class="form-control" name="first_name" id="first_name" value="" placeholder="Please enter your first name">
+              </div>
+              <div class="form-group">
+                <label for="last_name">Last Name</label>
+                <input type="text" class="form-control" name="last_name" id="last_name" value="" placeholder="Please enter your last name">
+              </div>
+              <div class="form-group">
+                <label for="sex">Gender</label><br>
+                <input for="gender" type="radio"  name="gender" value="Male" checked>Male
+                <input for="gender" type="radio"  name="gender" value="Female">Female
+              </div>
+              <div class="form-group">
+                <label for="location">Where are you from?</label>
+                <select class="form-control">
+                  <optgroup label="North America">
+                    <option value="canada" name="location">Canada</option>
+                    <option value="usa" name="location">USA</option>
+                  </optgroup>
+                  <optgroup label="Europe">
+                    <option value="uk" name="location">United Kingdom</option>
+                    <option value="Other" name="location">Other</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="dob" >When were you born?</label>
+                <input type="date" class="form-control" name="dob" value="">
+              <div class="form-group">
+                <label for="email" >E-mail address</label>
+                <input type="email" class="form-control" name="email" id="email" value="" placeholder="Please enter your e-mail address">
+              </div>
+              <div class="form-group">
+                <label for="password" >Password</label>
+                <input type="password" class="form-control" name="password" id="password" value="" placeholder="Please enter your password">
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4" form-group>
+          <fieldset>
+          <div>
+            <legend class="clearer">Additional Information</legend>
+              <div class="form-group">
+                <label for="username" >Username</label>
+                <input type="text" class="form-control" name="username" id="username" value="" placeholder="Please enter your username">
+              </div><br>
+              <div class="form-group">
+                <label for="referred_how">How did you hear about us?</label><textarea  name="referred_how" class="form-control" rows="8" cols="41" placeholder="Please type out how you heard about us"></textarea>
+              </div><br>
+              <div class="form-group">
+                <label for="referred_how">Please choose which best describes you</label><br>
+                <input type="checkbox" name="personality" value="Extroverted">&nbsp Extroverted &nbsp
+                <input type="checkbox" name="personality" value="Introverted">&nbsp Introverted &nbsp 
+              </div>
+              <button type="submit" class="btn btn-success">Sign me up!</button>
+          </div>
+        </fieldset>
+      </div>
+    </form>
+  </div>
+</div>
+

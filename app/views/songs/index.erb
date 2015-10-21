@@ -1,26 +1,23 @@
 <div class="container-fluid">
   <div class="row">
-    
-  </div>
-  <div class="row">
     <div class="col-sm-4">
-      <div id="left-col-divider"></div><!--trying to add column dividers -->
     </div>
     <div class="col-sm-4">
       <% @songs.each do |song| %>
         <div class = "song">
-          <h3><%= song.title %><br><small id= "artist"><%= song.artist %></small></h3>
+          <h3><%= song.title %><small>(<%= song.votes %>)</small><br><small id="artist"><%= song.artist %></small></h3>
           <p>
-            <small id="song_link"><a href="<%= song.url %>">Listen</a></small>
+            <small id="song_link"><a href="<%= song.url %>">Listen</a></small><br>
+            <small>Added by <%= User.find(song.user_id).username %></small><br>
+            <small><a href="/songs/upvote/<%= song.id %>">Upvote</a></small>
           </p>
-          <br>
+          <hr/>
         </div>
       <% end %>
     </div>
     <div class="col-sm-4">
-      <div id="right-col-divider"></div> <!--trying to add column dividers -->
-    </div>
   </div>
+</div>
 
 
 

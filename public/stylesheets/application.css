@@ -1,32 +1,53 @@
 body {
   text-align: center;
   font-family: Verdana;
+  background: url("../images/infinity.jpg") no-repeat 50% 50% fixed; 
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
 }
 
 .page_navbar {
   color: #fff;
   font-size: 60px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
-
+ 
 small#artist {
   font-size: 13px;
   font-style: italic;
 }
 
-small#song_link {
-  font-size: 11px;
+input.form-control {
+  margin-top: 50px;
 }
 
-div#right-col-divider {
-  padding-left: 15px; 
-  border-left: 1px solid #ccc;
-  
+input.profile_spacing {
+  margin-top: 0px;
 }
 
-div#left-col-divider {
-  padding-right: 15px; 
-  border-right: 1px solid #ccc;
-  
+input {
+   text-align:center;
 }
 
+div.login_from_navbar {
+  margin-top: 8px;
+}
+
+h2.error_style {
+  font-weight: 900;
+
+}
+
+ul.errors {
+  list-style-type: none;
+}
+
+.nav_padding {
+  padding-bottom: 30px;
+}
+
+#search_bar {
+  margin-right: -300px;
+}

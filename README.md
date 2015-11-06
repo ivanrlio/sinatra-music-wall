@@ -1,7 +1,8 @@
-Sinatra
+Sinatra Music Wall
 =============
 
-Brought to you by Lighthouse Labs
+Sinatra music wall is a primitive version of some music displaying sites.  The main focus of this exercise was: a) users are able to add songs such that on the /index, all the songs are displayed with links to their respective videos, b) to be able to link songs that were upvoted by users, as well as songs added by these users, to display on their 'Profile' page, c) users can only upvote a song ONCE.
+
 
 ## Getting Started
 
@@ -16,13 +17,3 @@ Brought to you by Lighthouse Labs
 .width 30
 
 
-<!-- seed data -->
-<!-- usernames -->
-User.create username: "FatCat", first_name: "Ivan", last_name: "Rickard Liow", password: "FatCat"
-
-User.create username: "PrincessMarmaya", first_name: "Stephen", last_name: "Slade", password: "PrincessMarmaya"
-
-<!-- song names -->
-Song.create title: 'ABGT150 Sydney: A&B', artist: 'Above & Beyond', url: 'https://www.youtube.com/watch?v=DDQWoe8AoUs' 
-
-Song.create title: 'ABGT150 Sydney: Grum', artist: 'Grum', url: 'https://www.youtube.com/watch?v=N9vtb7ke0lM'
